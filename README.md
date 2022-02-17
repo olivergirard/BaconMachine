@@ -28,3 +28,6 @@ While "a" is used in this example, any vowel besides y is also applicable.
 
 ## General Baconian cipher information
 A copy of the Baconian cipher that will be used in this program can be found [here](https://www.cryptogram.org/downloads/aca.info/ciphers/Baconian.pdf).
+
+## Fun fact
+I don't like bacon. This program has nothing to do with bacon.
