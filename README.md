@@ -1,4 +1,4 @@
-# Bacon Gibberish
+# Bacon Machine
 Bacon Gibberish is a program that creates a fake language out of English letters using the Baconian cipher, that basic phonetics of Japanese, and some preexisting rules that add diversity to the language and make it sound unique. This was developed with the idea of writing songs that cannot be deciphered without some knowledge of the Baconian cipher and the special rules applied to it (see below!).
 
 ## Installation
