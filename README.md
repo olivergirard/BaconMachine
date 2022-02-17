@@ -21,10 +21,10 @@ While "a" is used in this example, any vowel besides y is also applicable.
 | sa | sha |
 
 ### Usage of certain letters
-- l is replaced with r
-- q is replaced with k
+- l is replaced with r, not ry
+- q is replaced with k, not ky
 - v is replaced with f
-- x is replaced with k
+- x is replaced with k, not ky
 
 ## General Baconian cipher information
 A copy of the Baconian cipher that will be used in this program can be found [here](https://www.cryptogram.org/downloads/aca.info/ciphers/Baconian.pdf).
