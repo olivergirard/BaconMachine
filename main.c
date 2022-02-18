@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 void english_to_cipher(char *s, char *sentence, char* cipher_sentence);
 int MAX_LENGTH = 100;
@@ -78,13 +79,34 @@ void english_to_cipher(char *s, char *sentence, char *cipher_sentence) {
   }
 
   printf("Encoded sentence: %s\n", cipher_sentence);
+  bool consonant = true;
 
   //bacon time! a space should come after every vowel. print to terminal
   for (int p = 0; p < size; p++) {
     if (cipher_sentence[p] == 'a') {
-      random = (rand() % 13);
+      if (consonant == true) {
+        do {
+          random = (rand() % 13);
+        } while ((random != 0) && (random != 4) && (random != 8));
+        consonant = false;
+      } else {
+        do {
+          random = (rand() % 13);
+        } while ((random == 0) || (random == 4) || (random == 8));
+        consonant = true;
+      }
     } else {
-      random = (rand() % 13) + 13;
+      if (consonant == true) {
+        do {
+          random = (rand() % 13) + 13;
+        } while ((random != 14) && (random != 20));
+        consonant = false;
+      } else {
+        do {
+          random = (rand() % 13) + 13;
+        } while ((random == 14) || (random == 20));
+        consonant = true;
+      }
     }
     printf("%s", language_array[random]);
     if ((random == 0) || (random == 4) || (random == 8) || (random == 14) || (random == 20)) {
