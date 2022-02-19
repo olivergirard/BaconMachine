@@ -4,30 +4,32 @@
 #include <stdbool.h>
 
 void english_to_cipher(char *s, char *sentence, char* cipher_sentence);
-int MAX_LENGTH = 100;
+int MAX_LENGTH = 500;
 
 int main() {
-  char *s = "\0";
-  s = (char*) malloc(MAX_LENGTH * sizeof(char));
+
   char *more_bacon = "\0";
-  more_bacon = (char*) malloc(MAX_LENGTH * sizeof(char));
 
   printf("Welcome to the Bacon Machine!\n");
   printf("RULES: Spaces are allowed, but no special characters!\n");
-  printf("Sentences cannot be more than 100 characters.\n");
+  printf("Sentences cannot be more than 500 characters.\n");
   do {
     char *sentence = "\0";
     sentence = (char*) malloc(MAX_LENGTH * sizeof(char));
     char *cipher_sentence = "\0";
     cipher_sentence = (char*) malloc((MAX_LENGTH * 5 * sizeof(char)) + 1);
+    char *s = "\0";
+    s = (char*) malloc(MAX_LENGTH * sizeof(char));
+    more_bacon = (char*) malloc(MAX_LENGTH * sizeof(char));
 
     printf("Enter a sentence. Remember the rules!\n");
-    scanf("%s", s);
+    scanf("%[^\n]", s);
+
     printf("Your sentence is being run through the Bacon Machine...\n");
     printf("Your completed sentence is:\n");
     english_to_cipher(s, sentence, cipher_sentence);
     printf("Would you like to make more Bacon? Enter \"NO\" or \"no\" if you're all Bacon-ed out!\n");
-    scanf("%s", more_bacon);
+    scanf("%*c%[^\n]%*c", more_bacon);
   } while ((strcmp(more_bacon, "NO") != 0) && (strcmp(more_bacon, "no") != 0));
 
   return 0;
@@ -39,17 +41,20 @@ void english_to_cipher(char *s, char *sentence, char *cipher_sentence) {
   char *cipher_array[26] = {"aaaaa", "aaaab", "aaaba", "aaabb", "aabaa", "aabab", "aabba", "aabbb", "abaaa", "abaaa", "abaab", "baaaa", "ababb", "abbaa", "abbab", "abbba", "abaab", "baaaa", "baaab", "baaba", "baabb", "aabab", "babaa", "abaab", "babba", "babbb"};
   char *language_array[26] = { "a", "by", "ch", "d", "e", "f", "gy", "hy", "i", "j", "ky", "r", "my", "ny", "o", "py", "k", "ry", "sh", "t", "u", "f", "w", "s", "y", "z" };
 
-
   //size of s
   while (s[size] != '\0') {
     size++;
   }
 
   //removes all special characters from the sentence, including spaces
-  if (((s[0] >= 65) && (s[0] <= 90)) || ((s[0] >= 97) && (s[0] <= 122))) {
-    strcat(sentence, &s[0]);
-    count++;
+  for (int i = 0; i < size; i++) {
+    if (((s[i] >= 65) && (s[i] <= 90)) || ((s[i] >= 97) && (s[i] <= 122))) {
+      strncat(sentence, &s[i], 1);
+      count++;
+    }
   }
+
+  printf("sentence: %s", sentence);
 
   count = 0;
   size = 0;
