@@ -31,6 +31,7 @@ While "a" is used in this example, any vowel besides y is also applicable.
   - Make the yes-or-no option within main() more user-friendly.
   - Make cipher_array and language_array global.
   - Create multiple size variables.
+- **Prevent certain combinations that cannot be pronounced.** These include myi, du, wi, etc.
 
 ## General Baconian cipher information
 A copy of the Baconian cipher that will be used in this program can be found [here](https://www.cryptogram.org/downloads/aca.info/ciphers/Baconian.pdf).
