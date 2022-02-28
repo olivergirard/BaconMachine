@@ -58,8 +58,6 @@ void english_to_cipher(char *s, char *sentence, char *cipher_sentence) {
     }
   }
 
-  printf("sentence: %s", sentence);
-
   count = 0;
   size = 0;
 
@@ -87,7 +85,6 @@ void english_to_cipher(char *s, char *sentence, char *cipher_sentence) {
     size++;
   }
 
-  printf("Encoded sentence: %s\n", cipher_sentence);
   bool consonant = true;
   char *previous_consonant = "\0";
   previous_consonant = (char*) malloc((MAX_LENGTH * sizeof(char)));
@@ -127,6 +124,7 @@ void english_to_cipher(char *s, char *sentence, char *cipher_sentence) {
       }
     }
 
+    //if the previous consonant and the current vowel are a bad match
     for (int i = 0; i < BAD_I_SIZE; i++) {
       if ((strcmp(previous_consonant, bad_i[i]) == 0) && (strcmp(language_array[random], "i") == 0)) {
         bad_consonant = true;
@@ -141,6 +139,7 @@ void english_to_cipher(char *s, char *sentence, char *cipher_sentence) {
 
     if (bad_consonant == true) {
       p--;
+      consonant = false;
     } else {
       printf("%s", language_array[random]);
       if ((random == 0) || (random == 4) || (random == 8) || (random == 14) || (random == 20)) {
@@ -148,7 +147,10 @@ void english_to_cipher(char *s, char *sentence, char *cipher_sentence) {
       }
     }
 
+    bad_consonant = false;
+
     random = 0;
   }
+
   printf("\n");
 }
