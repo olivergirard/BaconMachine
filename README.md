@@ -31,6 +31,7 @@ While "a" is used in this example, any vowel besides y is also applicable.
   - Make the yes-or-no option within main() more user-friendly.
   - Make cipher_array and language_array global.
   - Create multiple size variables.
+  - Allow for user input of (virtually) any size. I'm hoping this is possible with the usage of %m?
 - **Prevent certain combinations that cannot be pronounced.** These include myi, du, wi, etc.
 
 ## General Baconian cipher information
