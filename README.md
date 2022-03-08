@@ -10,6 +10,7 @@ As of right now, Bacon Machine needs a compiler in order to run. I would love to
 | ------------- | ------------- |
 | cx | chx |
 | sx | shx |
+| ------------- | ------------- |
 Where "x" is any vowel except for "y".
 
 ### Usage of certain letters
