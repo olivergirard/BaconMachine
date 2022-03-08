@@ -41,8 +41,8 @@ void english_to_cipher(char *s, char *sentence, char *cipher_sentence) {
   int count = 0;
   int size = 0;
   char *cipher_array[26] = {"aaaaa", "aaaab", "aaaba", "aaabb", "aabaa", "aabab", "aabba", "aabbb", "abaaa", "abaaa", "abaab", "baaaa", "ababb", "abbaa", "abbab", "abbba", "abaab", "baaaa", "baaab", "baaba", "baabb", "aabab", "babaa", "abaab", "babba", "babbb"};
-  char *language_array[26] = { "a", "by", "ch", "d", "e", "f", "gy", "hy", "i", "j", "ky", "r", "my", "ny", "o", "py", "k", "ry", "sh", "t", "u", "f", "w", "s", "y", "z" };
-  char *bad_i[] = {"by", "d", "gy", "hy", "ky", "my", "ny", "py", "ry", "s", "t", "w", "y", "z"};
+  char *language_array[26] = {"a", "b", "ch", "d", "e", "s", "g", "h", "i", "j", "k", "r", "m", "n", "o", "p", "k", "r", "sh", "t", "u", "m", "w", "s", "y", "z"};
+  char *bad_i[] = {"b", "d", "g", "h", "k", "m", "n", "p", "r", "s", "t", "w", "y", "z"};
   char *bad_u[] = {"d", "t", "w"};
 
   //size of s
@@ -135,6 +135,10 @@ void english_to_cipher(char *s, char *sentence, char *cipher_sentence) {
       if ((strcmp(previous_consonant, bad_u[i]) == 0) && (strcmp(language_array[random], "u") == 0)) {
         bad_consonant = true;
       }
+    }
+
+    if ((strcmp(previous_consonant, "w") == 0) && (strcmp(language_array[random], "e") == 0)) {
+      bad_consonant = true;
     }
 
     if (bad_consonant == true) {

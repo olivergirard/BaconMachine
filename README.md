@@ -1,30 +1,24 @@
 # Bacon Machine
-Bacon Machine is a program that creates a fake language out of English letters using the Baconian cipher, that basic phonetics of Japanese, and some preexisting rules that add diversity to the language and make it sound unique. This was developed with the idea of writing songs that cannot be deciphered without some knowledge of the Baconian cipher and the special rules applied to it (see below!).
+Bacon Machine is a program that creates a fake language out of English letters using the Baconian cipher, that basic phonetics of Japanese, and some preexisting rules that add diversity to the language and make it sound unique. This was developed with the idea of writing things that cannot be deciphered without some knowledge of the Baconian cipher and the special rules applied to it (see below!). The rules of the language were chosen based on the phonic sounds in the majority of Japanese UTAU voicebanks for more applicable pronunciation.
 
 ## Installation
 As of right now, Bacon Machine needs a compiler in order to run. I would love to turn this into an executable file someday!
 
 ## Rules used when generating the language
-### Consonant-Vowel to Consonant-Vowel-Vowel
-While "a" is used in this example, any vowel besides y is also applicable.
-| CV  | CVV |
+### Consonant-Vowel to Consonant-Consonant-Vowel
+| CV  | CCV |
 | ------------- | ------------- |
-| ba  | bya  |
-| ca | cha |
-| ga | gya |
-| ha  | hya  |
-| ka | kya |
-| ma | mya |
-| na | nya |
-| pa | pya |
-| ra | rya |
-| sa | sha |
+| cx | chx |
+| sx | shx |
+Where "x" is any vowel except for "y".
 
 ### Usage of certain letters
-- l is replaced with r, not ry
-- q is replaced with k, not ky
-- v is replaced with f
-- x is replaced with k, not ky
+Some of these changes make sense phonetically. Some of these changes are purely cosmetic.
+- f is replaced with s
+- l is replaced with r
+- q is replaced with k
+- v is replaced with m
+- x is replaced with k
 
 ## TODO
 - General cleanup and optimization:
@@ -32,7 +26,6 @@ While "a" is used in this example, any vowel besides y is also applicable.
   - Make cipher_array and language_array global.
   - Create multiple size variables.
   - Allow for user input of (virtually) any size. I'm hoping this is possible with the usage of %m?
-- **Prevent certain combinations that cannot be pronounced.** Most of these are done save for "we" but further testing is needed.
 
 ## General Baconian cipher information
 A copy of the Baconian cipher that will be used in this program can be found [here](https://www.cryptogram.org/downloads/aca.info/ciphers/Baconian.pdf).
