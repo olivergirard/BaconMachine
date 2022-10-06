@@ -41,9 +41,9 @@ void english_to_cipher(char *s, char *sentence, char *cipher_sentence) {
   int count = 0;
   int size = 0;
   char *cipher_array[26] = {"aaaaa", "aaaab", "aaaba", "aaabb", "aabaa", "aabab", "aabba", "aabbb", "abaaa", "abaaa", "abaab", "baaaa", "ababb", "abbaa", "abbab", "abbba", "abaab", "baaaa", "baaab", "baaba", "baabb", "aabab", "babaa", "abaab", "babba", "babbb"};
-  char *language_array[26] = {"a", "b", "ch", "d", "e", "s", "g", "h", "i", "j", "k", "r", "m", "n", "o", "p", "k", "r", "sh", "t", "u", "m", "w", "s", "y", "z"};
+  char *language_array[26] = {"a", "b", "ch", "d", "e", "s", "g", "h", "i", "j", "k", "r", "m", "n", "o", "p", "k", "r", "sh", "t", "u", "m", "w", "s", "n", "z"};
   char *bad_i[] = {"b", "d", "g", "h", "k", "m", "n", "p", "r", "s", "t", "w", "y", "z"};
-  char *bad_u[] = {"d", "t", "w"};
+  char *bad_u[] = {"d", "h", "t", "w"};
 
   //size of s
   while (s[size] != '\0') {
