@@ -19,7 +19,8 @@ Some of these changes make sense phonetically. Some of these changes are purely 
 - l is replaced with r
 - q is replaced with k
 - v is replaced with m
-- x is replaced with k
+- x is replaced with s
+- y is replaced with n
 
 ## TODO
 - General cleanup and optimization:
