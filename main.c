@@ -6,7 +6,7 @@
 void english_to_cipher(char *s, char *sentence, char* cipher_sentence);
 int MAX_LENGTH = 500;
 int BAD_I_SIZE = 14;
-int BAD_U_SIZE = 3;
+int BAD_U_SIZE = 4;
 
 int main() {
 
